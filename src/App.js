@@ -36,18 +36,19 @@ function App() {
 
     const leftContents = (
         <React.Fragment>
-            <Button label="New" icon="pi pi-plus" className="mr-2" />
-            <Button label="Upload" icon="pi pi-upload" className="p-button-success" />
+            <Button label="Home" icon="pi pi-home" className="mr-2" />
             <i className="pi pi-bars p-toolbar-separator mr-2" />
-            <SplitButton label="Save" icon="pi pi-check" model={items} className="p-button-warning"></SplitButton>
+            <h1>SG TECH INFORMÁTICA </h1>
+            {/* <Button label="Upload" icon="pi pi-upload" className="p-button-success" /> */}
+            {/* <SplitButton label="Save" icon="pi pi-check" model={items} className="p-button-warning"></SplitButton> */}
         </React.Fragment>
     );
 
     const rightContents = (
         <React.Fragment>
-            <Button icon="pi pi-search" className="mr-2" />
-            <Button icon="pi pi-calendar" className="p-button-success mr-2" />
-            <Button icon="pi pi-times" className="p-button-danger" />
+            <Button icon="pi pi-facebook" className="mr-2" />
+            <Button icon="pi pi-whatsapp" className="p-button-success mr-2" />
+            <Button icon="pi pi-instagram" className="p-button-danger" />
         </React.Fragment>
     );
     const events1 = [
@@ -104,9 +105,15 @@ function App() {
 
     return ( 
     <div className='SgTechInfo'>
-        <Toolbar left={leftContents} right={rightContents} />
 
-        <h1 style={{marginLeft:'30rem'}}>SG TECH INFORMÁTICA </h1>
+        <div className='sgLead'>
+            
+        <Toolbar
+            style={{height:'95px'}}
+            left={leftContents} 
+            right={rightContents} 
+            />
+        </div>
 
         <div className="field col-12 md:col-4">
      

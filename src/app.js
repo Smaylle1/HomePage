@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Toolbar } from 'primereact/toolbar';
 import { Button } from 'primereact/button';
+import { SplitButton } from 'primereact/splitbutton';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import './index.css';
+
 
 
 
@@ -46,14 +48,13 @@ function App() {
             <Button icon="pi pi-facebook" className="mr-2" />
             <Button icon="pi pi-whatsapp" className="p-button-success mr-2" />
             <Button icon="pi pi-instagram" className="p-button-danger" />
-
         </React.Fragment>
     );
     const events1 = [
-        { status: 'Equipamento parou?', icon: 'pi pi-thumbs-down', color: '', image: '' },
-        { status: 'Notebook', icon: 'pi pi-desktop', color: '' },
-        { status: 'Video Games', icon: 'pi pi-wrench', color: '' },
-        { status: 'Pc Gamers', icon: 'pi pi-thumbs-up', color: '' }
+        { status: 'Equipamento parou?', date: '', icon: 'pi pi-thumbs-down', color:'', image: '' },
+        { status: 'Processing', date: '', icon: 'pi pi-desktop', color: '' },
+        { status: 'Shipped', date: '', icon: 'pi pi-wrench', color: '' },
+        { status: 'Delivered', date: '', icon: 'pi pi-thumbs-up', color: '' }
     ];
     const events2 = [
         ''
@@ -61,7 +62,7 @@ function App() {
     const customizedMarker = (item) => {
         return (
             <span className="custom-marker shadow-1" style={{ backgroundColor: item.color }}>
-                <i className={item.icon} style={{fontSize:'2rem'}}></i>
+                <i className={item.icon} ></i>
             </span>
         );
     };
@@ -104,11 +105,10 @@ function App() {
     return ( 
     <div className='SgTechInfo'>
 
-        <div className='sg' >
+        <div className='sgLead'>
             
         <Toolbar
-
-            style={{height:'95px'}}
+            style={{height:'95px',justifyContent:'initial'}}
             left={leftContents} 
             right={rightContents} 
             />
